@@ -616,7 +616,7 @@ body.presenter_view div#current_presenter_notes {
   height: 52%;
   margin-left: 40px;
   z-index: 2;
-  width: 944px;
+  width: 938px;
   border: 4px solid #aaa;
   background-color: #fff;
 }
@@ -636,7 +636,10 @@ body.presenter_view #time {
 }
 
 body.presenter_view div#current_presenter_notes header {
-  /*display: none;*/
+  border-bottom: 1px solid #ccc;
+}
+body.presenter_view div#current_presenter_notes header h1 {
+  margin: 5px 10px;
 }
 
 body.presenter_view div#current_presenter_notes section {
@@ -1328,7 +1331,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              1/10
+              1/11
             </aside>
           </footer>
         </div>
@@ -1356,7 +1359,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              2/10
+              2/11
             </aside>
           </footer>
         </div>
@@ -1387,7 +1390,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              3/10
+              3/11
             </aside>
           </footer>
         </div>
@@ -1438,7 +1441,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              4/10
+              4/11
             </aside>
           </footer>
         </div>
@@ -1473,7 +1476,37 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              5/10
+              5/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: example.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>This is a very long title here to ensure it wraps correctly</h1></header>
+            
+            
+            <section><p>This is just a paragraph of text that is quite long so that it probably goes over multiple lines. As such it should still look okay though!</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="example.md">example.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/11
             </aside>
           </footer>
         </div>
@@ -1508,7 +1541,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              6/10
+              7/11
             </aside>
           </footer>
         </div>
@@ -1544,7 +1577,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              7/10
+              8/11
             </aside>
           </footer>
         </div>
@@ -1586,7 +1619,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              8/10
+              9/11
             </aside>
           </footer>
         </div>
@@ -1616,7 +1649,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              9/10
+              10/11
             </aside>
           </footer>
         </div>
@@ -1644,7 +1677,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              10/10
+              11/11
             </aside>
           </footer>
         </div>
@@ -1690,32 +1723,38 @@ function main() {
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">This is a list</a></th>
+        <th><a href="#slide6">This is a very long title here to ensure it wraps correctly</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Another slide</a></th>
+        <th><a href="#slide7">This is a list</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Some interesting code here</a></th>
+        <th><a href="#slide8">Another slide</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">A title with an image</a></th>
+        <th><a href="#slide9">Some interesting code here</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Thank you</a></th>
+        <th><a href="#slide10">A title with an image</a></th>
         <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Thank you</a></th>
+        <td><a href="#slide11">11</a></td>
       </tr>
       
       
