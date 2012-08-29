@@ -367,6 +367,38 @@ function main() {
         }
     };
 
+    var handleContextMenu = function(event) {
+        if (!modifierKeyDown) {
+            event.preventDefault();
+            return false;
+        }
+    }
+
+    var handleClick = function(event) {
+        if (modifierKeyDown) {
+            return;
+        }
+        var clickType = 'LEFT';
+        if (event.which) { 
+            if (event.which==3) clickType='RIGHT';
+            if (event.which==2) clickType='MIDDLE';
+        }
+        else if (event.button) {
+            if (event.button==2) clickType='RIGHT';
+            if (event.button==4) clickType='MIDDLE';
+        }
+        switch (clickType) {
+            case 'LEFT':
+                event.preventDefault();
+                prevSlide();
+                break;
+            case 'RIGHT':
+                event.preventDefault();
+                nextSlide();
+                break;
+        }
+    }
+
     var handleBodyKeyDown = function(event) {
         // console.log("Key Down: " + event.keyCode);
         switch (event.keyCode) {
@@ -559,6 +591,8 @@ function main() {
         document.addEventListener('keydown', handleBodyKeyDown, false);
         document.addEventListener('keydown', checkModifierKeyDown, false);
         document.addEventListener('DOMMouseScroll', handleWheel, false);
+        document.addEventListener('mousedown', handleClick, false);
+        document.addEventListener('contextmenu', handleContextMenu, true);
 
         window.onmousewheel = document.onmousewheel = handleWheel;
         window.onresize = expandSlides;
