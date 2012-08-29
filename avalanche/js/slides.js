@@ -593,8 +593,8 @@ function main() {
         document.addEventListener('keydown', handleBodyKeyDown, false);
         document.addEventListener('keydown', checkModifierKeyDown, false);
         document.addEventListener('DOMMouseScroll', handleWheel, false);
-        document.addEventListener('mousedown', handleClick, false);
-        document.addEventListener('contextmenu', handleContextMenu, false);
+        // document.addEventListener('mousedown', handleClick, false);
+        // document.addEventListener('contextmenu', handleContextMenu, false);
 
         window.onmousewheel = document.onmousewheel = handleWheel;
         window.onresize = expandSlides;
