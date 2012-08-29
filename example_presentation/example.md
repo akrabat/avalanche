@@ -80,6 +80,13 @@ This is just a paragraph of text that is quite long so that it probably goes ove
 
 ---
 
+# This is a very long title here to ensure it wraps correctly
+
+This is just a paragraph of text that is quite long so that it probably goes over multiple lines. As such it should still look okay though!
+
+
+---
+
 # This is a list
 
 * The first item
