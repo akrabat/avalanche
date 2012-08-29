@@ -426,8 +426,8 @@ body.presenter_view, body.presenter_view div.presentation {
   background-color: #333 !important;
 }
 body.presenter_view div.slides {
-  margin-left: -40px;
-  margin-top : -30px;
+  margin-left: -40px !important;
+  margin-top : -30px !important;
 }
 
 body.presenter_view div.slide {
@@ -441,6 +441,11 @@ body.presenter_view div.slide {
   -o-transform: scale(.45, .45);
   -o-transform-origin: 0 0;
   opacity: 1;
+  width: 864px !important;
+  height: 688px !important;
+  margin-left: 80px !important;
+  margin-top: 40px !important;
+
 }
 
 body.presenter_view .slide.far-past {
@@ -459,7 +464,7 @@ body.presenter_view .slide.current {
 
 body.presenter_view .slide.future {
   display: block;
-  margin-left: 500px;
+  margin-left: 500px !important;
   z-index: 1;
   opacity: 1;
   border: 8px solid #aaa;
