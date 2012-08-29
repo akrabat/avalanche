@@ -9,7 +9,7 @@ View an [example presentation](http://akrabat.github.com/avalanche/example.html)
 
 * Create a new directory
 * Place required markup files and any custom css files here
-* Copy the `example_presentation/presentation.cfg` to here and change the filenames as required
+* Copy the `example_presentation/presentation.cfg` to here and change the filenames and paths as required
 
 ## Building the slides
 
