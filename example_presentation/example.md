@@ -25,6 +25,10 @@ And this final line.
 
 ---
 
+# A really long title for a title slide
+
+---
+
 # A full-screen image
 
 <img src="elephpant.jpg" />
