@@ -1,8 +1,8 @@
 # Avalanche
 
+A theme and directory organisation for [landslide](https://github.com/adamzap/landslide)
 
-A theme and direcotry organisation for [landslide](https://github.com/adamzap/landslide)
-
+View an [example presentation](http://akrabat.github.com/avalanche/example.html)
 
 
 ## Building the slides
