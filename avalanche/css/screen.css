@@ -508,7 +508,10 @@ body.presenter_view #time {
 }
 
 body.presenter_view div#current_presenter_notes header {
-  /*display: none;*/
+  border-bottom: 1px solid #ccc;
+}
+body.presenter_view div#current_presenter_notes header h1 {
+  margin: 5px 10px;
 }
 
 body.presenter_view div#current_presenter_notes section {
