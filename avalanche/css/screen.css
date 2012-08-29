@@ -189,10 +189,15 @@ div.slide {
 }
 
 /* A title slide is a single header */
+.slide header:only-child {
+  display: table;
+}
+
 .slide header:only-child h1 {
   height: 600px;
-  line-height: 550px;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Image alignment options. Note that we align centre by default */
