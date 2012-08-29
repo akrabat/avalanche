@@ -317,10 +317,15 @@ div.slide {
 }
 
 /* A title slide is a single header */
+.slide header:only-child {
+  display: table;
+}
+
 .slide header:only-child h1 {
   height: 600px;
-  line-height: 550px;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Image alignment options. Note that we align centre by default */
@@ -362,7 +367,7 @@ section img.align-left, section img.left {
   padding   : 30px;
   color: white;
   position:absolute;
-  width     : 862px;
+  width     : 710px;
   min-height: 300px;
   left: 51px;
   top: 123px;
@@ -1295,8 +1300,8 @@ function main() {
         document.addEventListener('keydown', handleBodyKeyDown, false);
         document.addEventListener('keydown', checkModifierKeyDown, false);
         document.addEventListener('DOMMouseScroll', handleWheel, false);
-        document.addEventListener('mousedown', handleClick, false);
-        document.addEventListener('contextmenu', handleContextMenu, false);
+        // document.addEventListener('mousedown', handleClick, false);
+        // document.addEventListener('contextmenu', handleContextMenu, false);
 
         window.onmousewheel = document.onmousewheel = handleWheel;
         window.onresize = expandSlides;
@@ -1372,7 +1377,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              1/11
+              1/12
             </aside>
           </footer>
         </div>
@@ -1400,7 +1405,35 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              2/11
+              2/12
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: example.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>A really long title for a title slide</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="example.md">example.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/12
             </aside>
           </footer>
         </div>
@@ -1431,7 +1464,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              3/11
+              4/12
             </aside>
           </footer>
         </div>
@@ -1482,7 +1515,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              4/11
+              5/12
             </aside>
           </footer>
         </div>
@@ -1517,7 +1550,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              5/11
+              6/12
             </aside>
           </footer>
         </div>
@@ -1547,7 +1580,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              6/11
+              7/12
             </aside>
           </footer>
         </div>
@@ -1582,7 +1615,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              7/11
+              8/12
             </aside>
           </footer>
         </div>
@@ -1618,7 +1651,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              8/11
+              9/12
             </aside>
           </footer>
         </div>
@@ -1660,7 +1693,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              9/11
+              10/12
             </aside>
           </footer>
         </div>
@@ -1690,7 +1723,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              10/11
+              11/12
             </aside>
           </footer>
         </div>
@@ -1718,7 +1751,7 @@ function main() {
             </aside>
             
             <aside class="page_number">
-              11/11
+              12/12
             </aside>
           </footer>
         </div>
@@ -1746,56 +1779,62 @@ function main() {
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">A full-screen image</a></th>
+        <th><a href="#slide3">A really long title for a title slide</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Rob Allen (Akrabat)</a></th>
+        <th><a href="#slide4">A full-screen image</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">This is a title</a></th>
+        <th><a href="#slide5">Rob Allen (Akrabat)</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">This is a very long title here to ensure it wraps correctly</a></th>
+        <th><a href="#slide6">This is a title</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">This is a list</a></th>
+        <th><a href="#slide7">This is a very long title here to ensure it wraps correctly</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Another slide</a></th>
+        <th><a href="#slide8">This is a list</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Some interesting code here</a></th>
+        <th><a href="#slide9">Another slide</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">A title with an image</a></th>
+        <th><a href="#slide10">Some interesting code here</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Thank you</a></th>
+        <th><a href="#slide11">A title with an image</a></th>
         <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Thank you</a></th>
+        <td><a href="#slide12">12</a></td>
       </tr>
       
       
