@@ -372,10 +372,12 @@ function main() {
             event.preventDefault();
             return false;
         }
+        modifierKeyDown = false;
     }
 
     var handleClick = function(event) {
         if (modifierKeyDown) {
+            modifierKeyDown = false;
             return;
         }
         var clickType = 'LEFT';
@@ -592,7 +594,7 @@ function main() {
         document.addEventListener('keydown', checkModifierKeyDown, false);
         document.addEventListener('DOMMouseScroll', handleWheel, false);
         document.addEventListener('mousedown', handleClick, false);
-        document.addEventListener('contextmenu', handleContextMenu, true);
+        document.addEventListener('contextmenu', handleContextMenu, false);
 
         window.onmousewheel = document.onmousewheel = handleWheel;
         window.onresize = expandSlides;
