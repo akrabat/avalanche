@@ -1,8 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -18,14 +16,18 @@ p, ul, ol, table, pre, dl {
 
 h1, h2, h3 {
   line-height:1.1;
+  font-family: "Gill Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
 }
 
 h1 {
   font-size:28px;
+  font-weight: normal;
 }
 
 h2 {
   color:#393939;
+  font-weight: normal;
+  font-size: 1.3em;
 }
 
 h3, h4, h5, h6 {
@@ -39,7 +41,7 @@ a {
 }
 
 a small {
-  font-size:11px;
+  font-size:10px;
   color:#777;
   margin-top:-0.6em;
   display:block;
@@ -94,79 +96,20 @@ th {
 img {
   max-width:100%;
 }
-
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
-
-header ul {
-  list-style:none;
-  height:40px;
-  
-  padding:0;
-  
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
-
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
 strong {
   color:#222;
   font-weight:700;
 }
 
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
 
 section {
   width:500px;
-  float:right;
+  /*float:left;*/
   padding-bottom:50px;
 }
 
 small {
-  font-size:11px;
+  font-size:10px;
 }
 
 hr {
@@ -177,10 +120,10 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
+  width:500px;
+/*  float:left;
   position:fixed;
-  bottom:50px;
+*/  bottom:50px;
 }
 
 @media print, screen and (max-width: 960px) {
