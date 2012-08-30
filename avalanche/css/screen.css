@@ -232,6 +232,13 @@ section img.align-left, section img.left {
   z-index: 64;
   display: none;
 }
+body.presenter_view.blank .slide.current {
+   opacity: 0.2;
+}
+
+body.presenter_view #blank {
+    display: none !important;
+}
 
 /* Display notes (keyboard: 2) */
 .notes {
@@ -364,13 +371,16 @@ body.expose .slide:hover aside.page_number {
   position: absolute;
   display: block;
   margin: 0;
-  margin-left: -500px;
   padding: 10px 16px;
   overflow: auto;
   -webkit-transition: margin 0.2s ease-in-out;
   -moz-transition: margin 0.2s ease-in-out;
   -o-transition: margin 0.2s ease-in-out;
   font-size: 14px;
+}
+
+.sidebar.hidden {
+  margin-left: -500px;
 }
 
 .sidebar h2 {
