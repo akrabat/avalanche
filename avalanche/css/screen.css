@@ -230,7 +230,7 @@ body.expose div.slide {
   margin                  : 0 !important;
   margin-left             : 10px !important;
   margin-top              : 10px !important;
-  padding                 : 1px !important;
+  padding                 : 10px !important;
   -webkit-transition      : none;
   -moz-transition         : none;
   -o-transition           : none;  
