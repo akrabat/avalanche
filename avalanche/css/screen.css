@@ -133,9 +133,10 @@ div.slide {
 }
 
 .slide header:only-child h1 {
-  height: 600px;
-  text-align: center;
-  display: table-cell;
+  height        : 600px;
+  width         : 864px;
+  text-align    : center;
+  display       : table-cell;
   vertical-align: middle;
 }
 
