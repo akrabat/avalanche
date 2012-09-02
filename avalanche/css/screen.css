@@ -230,7 +230,7 @@ body.expose div.slide {
   margin                  : 0 !important;
   margin-left             : 10px !important;
   margin-top              : 10px !important;
-  padding                 : 0 !important;
+  padding                 : 1px !important;
   -webkit-transition      : none;
   -moz-transition         : none;
   -o-transition           : none;  
@@ -241,12 +241,13 @@ body.expose div.slide {
   -o-transform            : scale(.30, .30);
   -o-transform-origin     : 0 0;
   cursor                  : pointer;
-  border                  : 10px solid #fff;
-  background-color        : #eee;
+  border                  : 10px solid #ccc;
+  /*background-color        : #eee;*/
 }
 
 body.expose div.slide:hover {
-  background-color: #D7FCFC;
+  /*background-color: #D7FCFC;*/
+  border: 10px solid blue;
 }
 
 body.expose .slide-wrapper {
@@ -267,8 +268,7 @@ body.expose .slide.far-future {
 }
 
 body.expose .slide.current {
-  background-color: #fcfcd7;
-  border: 10px solid #ddb;
+  border: 10px solid red;
   -moz-transform: scale(.30, .30);
   -moz-transform-origin: 0 0;
   -webkit-transform: scale(.30, .30);
@@ -290,13 +290,18 @@ body.expose .slide aside.page_number {
   right           : 10px;
   font-size       : 40px;
   background-color: #eee;
-  padding: 10px;
+  color           : black;
+  padding         : 10px;
 }
+
 body.expose .slide.current aside.page_number {
-  background-color: #FCFCD7;
+  background-color: red;
+  color: white;
 }
+
 body.expose .slide:hover aside.page_number {
-  background-color: #D7FCFC;
+  background-color: blue;
+  color: white;
 }
 
 /* Sidebar for ToC and Help */
