@@ -1,0 +1,16 @@
+/***************************************************************************/
+/* A custom CSS to provide a black background */
+
+body {
+    color: #eee;
+    background-color: #333; /* Colour outside of slide */
+}
+
+div.presentation, div.slide {
+  background-color: black; /* colour of the slide */
+}
+
+div.slide h1, div.slide h2, div.slide h3, div.slide h4, div.slide h5, div.slide h6 {
+  color: #fff;
+  font-weight: normal;
+}
