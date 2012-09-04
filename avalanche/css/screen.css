@@ -308,6 +308,7 @@ body.expose .slide:hover aside.page_number {
 /* Sidebar for ToC and Help */
 .sidebar {
   background-color: #eee;
+  color: #000;
   border-right: 5px solid #ddd;
   z-index: 63;
   height: 100%;
