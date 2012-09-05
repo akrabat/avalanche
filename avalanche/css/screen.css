@@ -54,16 +54,29 @@ blockquote q:after  { content: '\2019'; }
 .cite { margin:0; text-align:right; margin-right: 40px;}
 
 /***************************************************************************/
-/* Specific clases set by the .fx: macro */
+/* Specific clases for use with the .fx: macro */
+
+/* smaller and larger */
+.smaller section {
+  font-size: 29px;
+}
+
+.larger section {
+  font-size: 43px;
+}
+
+/* titleslide: displaying a title(h1) and subtitle(h2) on the same slide */
 div.titleslide { text-align: center; }
 div.titleslide h1 { padding-top: 140px; font-size: 80px; font-weight: bold;}
 
+/* imageslide: covering a whole slide with an image */
 div.slides div.imageslide {margin: 0; width: 1024px; height: 768px;}
 div.imageslide img { position: absolute; top: 0; left: 0; width: 1024px; z-index: 0; }
 div.imageslide h1 { position: absolute; z-index: 3; left: 40px; top: 0; }
 
-div.white h1 {color: white !important;}
-div.black h1 {color: black !important;}
+/* black and white header for use with imageslide */
+div.whiteheading h1 {color: white !important;}
+div.blackheading h1 {color: black !important;}
 
 /***************************************************************************/
 /* Syntax highlighting is by Pygments - select via config file */

@@ -34,7 +34,7 @@ And this final line.
 <img src="elephpant.jpg" />
 
 
-.fx: imageslide white
+.fx: imageslide whiteheading
 
 ---
 
