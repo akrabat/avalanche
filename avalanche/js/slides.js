@@ -146,6 +146,11 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             }
         };
 
+        var toggleExposeMode = function() {
+            state.exposeActive = $('body').toggleClass('expose').hasClass('expose');
+            if (state.isPresenterView) $('body').toggleClass('presenter_view');
+        };
+
         var toggleModifierKey = function(keyCode, upOrDown) {
             switch (keyCode) {
                 case 16: // shift
@@ -187,17 +192,15 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
             switch (event.keyCode) {
                 // Toggle expose mode
                 case 27: // ESC
-                    $('body').toggleClass('expose');
-                    if (state.isPresenterView) $('body').toggleClass('presenter_view');
-                    state.exposeActive = !state.exposeActive;
+                    toggleExposeMode();
+                    //if (state.isPresenterView) $('body').toggleClass('presenter_view');
                     break;
 
                 // Leave expose mode
                 case 13: // Enter
                     if (!state.exposeActive) return;
-                    $('body').toggleClass('expose');
-                    if (state.isPresenterView) $('body').addClass('presenter_view');
-                    state.exposeActive = !state.exposeActive;
+                    toggleExposeMode();
+                    //if (state.isPresenterView) $('body').addClass('presenter_view');
                     break;
 
                 // Next slide
@@ -311,9 +314,10 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 
         $('.slide').click(function(event) {
             if (!state.exposeActive) return;
+            console.log('toggle expose');
+            toggleExposeMode();
             state.currentSlide = $(this).data('slide');
             updateSlideClasses(true);
-            $('body').toggleClass('expose');
             event.preventDefault();
         });
 
