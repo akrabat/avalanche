@@ -182,6 +182,20 @@ section img.align-left, section img.left {
   margin-left: 0;
 }
 
+section img.float-right {
+  display: block;
+  float: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+section img.float-left {
+  display: block;
+  float: left;
+  margin-right: auto;
+  margin-left: 0;
+}
+
 /* Blank screen */
 #blank {
   position: fixed;
