@@ -61,8 +61,16 @@ blockquote q:after  { content: '\2019'; }
   font-size: 29px;
 }
 
+.smaller section pre {
+  font-size: 18px;
+}
+
 .larger section {
   font-size: 43px;
+}
+
+.larger section pre {
+  font-size: 22px;
 }
 
 /* titleslide: displaying a title(h1) and subtitle(h2) on the same slide */
