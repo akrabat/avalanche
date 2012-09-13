@@ -79,7 +79,14 @@ div.titleslide h1 { padding-top: 140px; font-size: 80px; font-weight: bold;}
 
 /* imageslide: covering a whole slide with an image */
 div.slides div.imageslide {margin: 0; width: 1024px; height: 768px;}
-div.imageslide img { position: absolute; top: 0; left: 0; width: 1024px; z-index: 0; }
+div.imageslide img { 
+  position: absolute; 
+  top: 0; left: 0; 
+  width: 1024px; 
+  max-width: 1024px; max-height: 768px;
+  z-index: 0; 
+}
+
 div.imageslide h1 { position: absolute; z-index: 3; left: 40px; top: 0; }
 
 /* black and white header for use with imageslide */

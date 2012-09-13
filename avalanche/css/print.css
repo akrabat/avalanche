@@ -98,7 +98,18 @@ div.titleslide h1 { padding-top: 50pt; font-size: 66pt; font-weight: bold;}
 
 /* imageslide: covering a whole slide with an image */
 div.slides div.imageslide {margin: 0; width: 750pt; height: 498pt; overflow: hidden}
-div.imageslide img { position: relative; top: -144pt; left: -10pt; width: 750pt; z-index: 0; }
+div.imageslide img { 
+  position: relative; 
+  /*top: -144pt;*/
+  top: -498pt;
+  left: -10pt; 
+  width: 750pt;
+  height: 498pt;
+  max-width: 750pt !important; 
+  max-height: 498pt !important; 
+  z-index: 0; 
+}
+
 div.imageslide h1 { position: relative; z-index: 3 !important; /*left: 40px; top: -70pt; */}
 
 /* black and white header for use with imageslide */
@@ -179,7 +190,7 @@ div.slide div.inner {
 */
 
 /* Image alignment options. Note that we align centre by default */
-img { display: block; margin: auto; max-width: 600pt !important; max-height: 340pt !important;}
+img { display: block; margin: auto; max-width: 600pt; max-height: 340pt;}
 
 section img.align-center, section img.align-centre, section img.center, section img.centre {
   display: block;
