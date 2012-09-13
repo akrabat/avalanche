@@ -162,7 +162,7 @@ div.slide {
 }
 
 /* Image alignment options. Note that we align centre by default */
-img { display: block; margin: auto; }
+img { display: block; margin: auto; max-width: 864px; max-height: 500px;}
 
 section img.align-center, section img.align-centre, section img.center, section img.centre {
   display: block;

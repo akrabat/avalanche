@@ -131,7 +131,7 @@ This a line of text
 
 # A title with an image
 
-<img src="elephpant.jpg" width="700" />
+<img src="elephpant.jpg" />
 
 
 ---
