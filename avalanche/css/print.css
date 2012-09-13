@@ -189,6 +189,11 @@ div.slide div.inner {
 }
 */
 
+
+ol {
+  margin-left: 5pt;
+}
+
 /* Image alignment options. Note that we align centre by default */
 img { display: block; margin: auto; max-width: 600pt; max-height: 340pt;}
 

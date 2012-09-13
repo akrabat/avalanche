@@ -168,6 +168,10 @@ div.slide {
   vertical-align: middle;
 }
 
+ol {
+  margin-left: 15px;
+}
+
 /* Image alignment options. Note that we align centre by default */
 img { display: block; margin: auto; max-width: 864px; max-height: 500px;}
 
@@ -189,9 +193,6 @@ section img.align-left, section img.left {
   margin-left: 0;
 }
 
-ol {
-  margin-left: 15px;
-}
 section img.float-right {
   display: block;
   float: right;
