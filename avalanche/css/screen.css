@@ -189,6 +189,9 @@ section img.align-left, section img.left {
   margin-left: 0;
 }
 
+ol {
+  margin-left: 15px;
+}
 section img.float-right {
   display: block;
   float: right;
