@@ -97,16 +97,18 @@ div.titleslide { text-align: center; }
 div.titleslide h1 { padding-top: 50pt; font-size: 66pt; font-weight: bold;}
 
 /* imageslide: covering a whole slide with an image */
-div.slides div.imageslide {margin: 0; width: 750pt; height: 498pt; overflow: hidden}
+div.slides div.imageslide {margin: 0; width: 750pt; height: 460pt; overflow: hidden}
 div.imageslide img { 
   position: relative; 
   /*top: -144pt;*/
-  top: -498pt;
-  left: -10pt; 
+  /*top: -460pt;*/
+  /*left: -10pt; */
+  top: -138pt;
+  left: -10pt;
   width: 750pt;
-  height: 498pt;
+  height: 460pt;
   max-width: 750pt !important; 
-  max-height: 498pt !important; 
+  max-height: 460pt !important; 
   z-index: 0; 
 }
 
@@ -145,8 +147,8 @@ div.presentation, div.slides {
 
 div.slide {
   display: block !important;
-  width: 750pt !important;
-  height: 498pt !important;
+  width: 740pt !important;
+  height: 460pt !important;
   border: 2pt solid #ddd;
 /*  width      : 100%;
   height     : 100%;*/
@@ -156,7 +158,7 @@ div.slide {
 
 div.slide div.inner {
   width: 750pt !important;
-  height: 498pt !important;
+  height: 460pt !important;
   margin: auto;
   display: table-cell;
   padding: 10pt;
@@ -170,7 +172,7 @@ div.slide div.inner {
 
 .slide header:only-child h1 {
   width: 750pt !important;
-  height: 498pt !important;
+  height: 460pt !important;
   text-align    : center;
   display       : table-cell;
   vertical-align: middle;
