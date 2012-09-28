@@ -79,12 +79,20 @@ blockquote q:after  { content: '\2019'; }
   font-size: 29px;
 }
 
+.smaller div h1 {
+  font-size: 72px;
+}
+
 .smaller section pre {
   font-size: 18px;
 }
 
 .larger section {
   font-size: 43px;
+}
+
+.larger div h1 {
+  font-size: 72px;
 }
 
 .larger section pre {
