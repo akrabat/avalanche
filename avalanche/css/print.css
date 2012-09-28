@@ -44,6 +44,24 @@ li ul, li ul li {
   margin-top: 0;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table th {
+  text-align: left;
+  border-bottom: 1px solid #666;
+}
+table td, table th {
+  padding-left:   10px;
+  padding-right:  10px;
+  padding-top:    4px;
+  padding-bottom: 4px;
+}
+tr > td:first-child, tr > th:first-child {
+  padding-left: 0;
+}
+
 /* .notes are displayed when you press '2' */
 .notes {
   color: white;
