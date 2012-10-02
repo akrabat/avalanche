@@ -6,7 +6,7 @@ A4     498 x 750
 /***************************************************************************/
 /* The bits that you probably want to override! */
 body {
-  font-size: 20pt;
+  font-size: 8pt;
   font-family: "Helvetica", "Arial", "Liberation Sans", sans-serif;
   color: black;
   background-color: #fff; /* Colour outside of slide */
@@ -30,7 +30,7 @@ div.slide h3 + p, div.slide h4 + p, div.slide h5 + p, div.slide h6 + p {
 }
 
 pre {
-  font-size: 12pt;
+  font-size: 4.8pt;
   font-family: Monaco, Courier, monospace;
 }
 
@@ -72,12 +72,12 @@ tr > td:first-child, tr > th:first-child {
 /* A title slide is a single header */
 .slide header:only-child h1 {
   font-weight: bold;
-  font-size: 36pt;
+  font-size: 14pt;
 }
 
 /* Source and page number */
 aside.source, aside.page_number {
-  font-size: 14pt;
+  font-size: 5pt;
 }
 
 /* Quote and blockquote */
@@ -95,46 +95,46 @@ blockquote q:after  { content: '\2019'; }
 
 /* smaller and larger */
 .smaller section {
-  font-size: 16px;
+  font-size: 6px;
 }
 
 .smaller div h1 {
-  font-size: 40pt;
+  font-size: 16pt;
 }
 
 .smaller section pre {
-  font-size: 10pt;
+  font-size: 4pt;
 }
 
 .larger section {
-  font-size: 22pt;
+  font-size: 10pt;
 }
 
 .larger div h1 {
-  font-size: 40pt;
+  font-size: 16pt;
 }
 
 .larger section pre {
-  font-size: 14pt;
+  font-size: 8pt;
 }
 
 /* titleslide: displaying a title(h1) and subtitle(h2) on the same slide */
 div.titleslide { text-align: center; }
-div.titleslide h1 { padding-top: 50pt; font-size: 60pt; font-weight: bold;}
+div.titleslide h1 { padding-top: 50pt; font-size: 24pt; font-weight: bold;}
 
 /* imageslide: covering a whole slide with an image */
-div.slides div.imageslide {margin: 0; width: 750pt; height: 460pt; overflow: hidden}
+div.slides div.imageslide {margin: 0; width: 300pt; height: 184pt; overflow: hidden}
 div.imageslide img { 
   position: relative; 
   /*top: -144pt;*/
-  /*top: -460pt;*/
+  /*top: -184pt;*/
   /*left: -10pt; */
   top: -138pt;
   left: -10pt;
-  width: 750pt;
-  height: 460pt;
-  max-width: 750pt !important; 
-  max-height: 460pt !important; 
+  width: 300pt;
+  height: 184pt;
+  max-width: 300pt !important; 
+  max-height: 184pt !important; 
   z-index: 0; 
 }
 
@@ -173,18 +173,19 @@ div.presentation, div.slides {
 
 div.slide {
   display: block !important;
-  width: 740pt !important;
-  height: 460pt !important;
+  width: 296pt !important;
+  height: 184pt !important;
   border: 2pt solid #ddd;
 /*  width      : 100%;
   height     : 100%;*/
   overflow   : hidden;
-  page-break-after: always;
+  /*page-break-after: always;*/
+  margin-bottom: 60pt;
 }
 
 div.slide div.inner {
-  width: 750pt !important;
-  height: 460pt !important;
+  width: 300pt !important;
+  height: 184pt !important;
   margin: auto;
   display: table-cell;
   padding: 10pt;
@@ -197,8 +198,8 @@ div.slide div.inner {
 }
 
 .slide header:only-child h1 {
-  width: 750pt !important;
-  height: 460pt !important;
+  width: 300pt !important;
+  height: 184pt !important;
   text-align    : center;
   display       : table-cell;
   vertical-align: middle;
@@ -223,7 +224,7 @@ ol {
 }
 
 /* Image alignment options. Note that we align centre by default */
-img { display: block; margin: auto; max-width: 600pt; max-height: 340pt;}
+img { display: block; margin: auto; max-width: 240pt; max-height: 136pt;}
 
 section img.align-center, section img.align-centre, section img.center, section img.centre {
   display: block;
@@ -274,10 +275,8 @@ aside.source {
   text-align: right;
   display: block !important;
   visibility: visible !important;
-  top: -40pt;
-/*  bottom   : 6px;*/
+  top: -20pt;
   right    : 0px;
-  /*font-size: 8pt; */
   color    : black !important;
   padding  : 5pt !important;  
 }
@@ -287,4 +286,22 @@ aside.source {
 .presenter_notes, #current_presenter_notes, #presenter_note,
  #time {
   display: none;
+}
+
+
+pre,tt {
+  font-family: Inconsolata, Monaco, Courier, monospace;
+}
+
+
+ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+p {
+    margin-bottom: 0 !important;   
+}
+li li {
+    font-size: 0.8em !important;
+    padding: 5px 0;
 }
