@@ -259,9 +259,8 @@ section img.float-left {
 
 /* Source and page number */
 aside, footer {
-  display: block !important;
-  visibility: visible !important;
-  background-color: green !important;
+  display: block;
+  visibility: visible;
 }
 
 aside.source {
@@ -269,15 +268,12 @@ aside.source {
 }
 
 .page_number {
-  /*position: absolute;*/
   position: relative; 
   text-align: right;
   display: block !important;
   visibility: visible !important;
   top: -40pt;
-/*  bottom   : 6px;*/
   right    : 0px;
-  /*font-size: 8pt; */
   color    : black !important;
   padding  : 5pt !important;  
 }
@@ -287,4 +283,37 @@ aside.source {
 .presenter_notes, #current_presenter_notes, #presenter_note,
  #time {
   display: none;
+}
+
+
+/* Turn of page numbers by uncommenting this */
+.page_number {
+  display: none !important;
+}
+
+/* Custom CSS bits */
+.credits {
+    float: right; 
+    text-align:left;
+    padding-top: 150pt !important;
+}
+
+.columnlist2 ul {
+    vertical-align: top;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.columnlist3 ul {
+    vertical-align: top;
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
 }
