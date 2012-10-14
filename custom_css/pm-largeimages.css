@@ -16,8 +16,8 @@ body.presenter_view div.slide {
   height: 688px !important;
   margin-left: 60px !important;
   margin-top: 90px !important;
-
 }
+
 body.presenter_view .slide.future {
   display: block;
   margin-left: 560px !important;
@@ -31,7 +31,6 @@ body.presenter_view .slide.future {
   -webkit-transform-origin: 0 0;
   -o-transform: scale(0.55, 0.55);
   -o-transform-origin: 0 0;
-
 }
 
 body.presenter_view div#current_presenter_notes {
@@ -51,7 +50,7 @@ body.presenter_view .slide aside.page_number {
   position        : absolute;
   bottom          : 10px;
   right           : 10px;
-  font-size       : 40px;
+  font-size       : 70px;
   background-color: #eee;
   color           : black;
   padding         : 10px;
@@ -74,5 +73,5 @@ body.presenter_view #time {
   margin-top: 20px;
   padding: 0;
   line-height: 0;
-  font-size: 50px;
+  font-size: 55px;
 }
