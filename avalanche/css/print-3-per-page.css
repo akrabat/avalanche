@@ -1,6 +1,5 @@
 /*
-Letter 612 x 792
-A4     498 x 750
+3 slides to a page - useful for handouts
 */
 
 /***************************************************************************/
@@ -120,21 +119,21 @@ blockquote q:after  { content: '\2019'; }
 
 /* titleslide: displaying a title(h1) and subtitle(h2) on the same slide */
 div.titleslide { text-align: center; }
-div.titleslide h1 { padding-top: 50pt; font-size: 24pt; font-weight: bold;}
+div.titleslide h1 { padding-top: 25pt; font-size: 24pt; font-weight: bold;}
 
 /* imageslide: covering a whole slide with an image */
-div.slides div.imageslide {margin: 0; width: 300pt; height: 184pt; overflow: hidden}
+div.slides div.imageslide {margin: 0; width: 300pt; height: 200pt; overflow: hidden}
 div.imageslide img { 
   position: relative; 
   /*top: -144pt;*/
-  /*top: -184pt;*/
+  /*top: -200pt;*/
   /*left: -10pt; */
   top: -138pt;
   left: -10pt;
   width: 300pt;
-  height: 184pt;
+  height: 200pt;
   max-width: 300pt !important; 
-  max-height: 184pt !important; 
+  max-height: 200pt !important; 
   z-index: 0; 
 }
 
@@ -174,7 +173,7 @@ div.presentation, div.slides {
 div.slide {
   display: block !important;
   width: 296pt !important;
-  height: 184pt !important;
+  height: 200pt !important;
   border: 2pt solid #ddd;
 /*  width      : 100%;
   height     : 100%;*/
@@ -185,7 +184,7 @@ div.slide {
 
 div.slide div.inner {
   width: 300pt !important;
-  height: 184pt !important;
+  height: 200pt !important;
   margin: auto;
   display: table-cell;
   padding: 10pt;
@@ -199,7 +198,7 @@ div.slide div.inner {
 
 .slide header:only-child h1 {
   width: 300pt !important;
-  height: 184pt !important;
+  height: 200pt !important;
   text-align    : center;
   display       : table-cell;
   vertical-align: middle;
@@ -305,3 +304,38 @@ li li {
     font-size: 0.8em !important;
     padding: 5px 0;
 }
+
+
+div.break div header h1 {
+    padding-top: 0 !important;
+}
+
+.slide header:only-child h1 {
+    padding-top: 0 !important;
+}
+
+
+.columnlist2 ul {
+    vertical-align: top;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.columnlist3 ul {
+    vertical-align: top;
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+}
+
+img.errors {
+    width: 130pt !important;
+}
+
