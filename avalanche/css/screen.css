@@ -26,6 +26,7 @@ li {
 }
 
 table {
+  margin-top: 10px;
   border-collapse: collapse;
   width: 100%;
 }

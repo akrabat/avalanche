@@ -45,6 +45,7 @@ li ul, li ul li {
 }
 
 table {
+  margin-top: 6pt;
   border-collapse: collapse;
   width: 100%;
 }
