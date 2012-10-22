@@ -77,7 +77,7 @@ blockquote q:after  { content: '\2019'; }
 
 /* smaller and larger */
 .smaller section {
-  font-size: 29px;
+  font-size: 30px;
 }
 
 .smaller div h1 {
@@ -85,11 +85,11 @@ blockquote q:after  { content: '\2019'; }
 }
 
 .smaller section pre {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .larger section {
-  font-size: 43px;
+  font-size: 42px;
 }
 
 .larger div h1 {
@@ -97,7 +97,7 @@ blockquote q:after  { content: '\2019'; }
 }
 
 .larger section pre {
-  font-size: 22px;
+  font-size: 28px;
 }
 
 /* titleslide: displaying a title(h1) and subtitle(h2) on the same slide */
