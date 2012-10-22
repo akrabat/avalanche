@@ -96,7 +96,7 @@ blockquote q:after  { content: '\2019'; }
 
 /* smaller and larger */
 .smaller section {
-  font-size: 16px;
+  font-size: 18pt;
 }
 
 .smaller div h1 {
