@@ -178,8 +178,12 @@ div.slide {
   overflow   : hidden;
 }
 
-.slide.past, .slide.current, .slide.future {
+.slide.past, .slide.current {
   display: block;
+}
+
+.slide.future {
+  display: none;
 }
 
 /* A title slide is a single header */
