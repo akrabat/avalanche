@@ -136,6 +136,7 @@ div.blackheading h1 {color: black !important;}
   -webkit-transition: opacity 0.75s ease;
   -moz-transition: opacity 0.75s ease;
   -o-transition: opacity 0.75s ease;
+  z-index: 100;
 }
 
 .slide.future {
@@ -169,21 +170,14 @@ div.slides {
 }
 
 div.slide {
-  display    : none;
   margin-left: 80px; /* Nice big margin */
   margin-top : 40px;
   width      : 864px;
   height     : 688px;
   position   : absolute;
   overflow   : hidden;
-}
-
-.slide.past, .slide.current {
-  display: block;
-}
-
-.slide.future {
-  display: none;
+  z-index: 0;
+  opacity: 0;
 }
 
 /* A title slide is a single header */
