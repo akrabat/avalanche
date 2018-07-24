@@ -540,6 +540,30 @@ function main() {
         }
     };
 
+    var updateTimeElement = function (id, value, pad) {
+        var elem = document.getElementById(id),
+            paddedValue;
+
+        while (elem.firstChild) {
+            elem.removeChild(elem.firstChild);
+        }
+
+        if (pad) {
+            paddedValue = ("0" + value.toString()).slice(-2);
+        } else {
+            paddedValue = value.toString();
+        }
+        elem.appendChild(document.createTextNode(paddedValue));
+    };
+
+    var updateTime = function () {
+        var date = new Date();
+
+        updateTimeElement("hours", date.getHours(), false);
+        updateTimeElement("minutes", date.getMinutes(), true);
+        updateTimeElement("seconds", date.getSeconds(), true);
+    };
+
     // initialize
 
     (function() {
@@ -551,6 +575,8 @@ function main() {
             showingPresenterView = true;
             presenterViewWin = window;
             addClass(document.body, 'presenter_view');
+            updateTime();
+            window.setInterval(updateTime, 1000);
         } else {
             currentSlideNo = Number(window.location.hash.replace('#slide', ''));
         }
