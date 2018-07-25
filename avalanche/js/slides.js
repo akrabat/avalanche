@@ -22,54 +22,6 @@ function main() {
     var presenterViewWin = null;
     var isPresenterView = false;
 
-    var str2array = function(s) {
-        if (typeof s == 'string' || s instanceof String) {
-            if (s.indexOf(' ') < 0) {
-                a1[0] = s;
-                return a1;
-            } else {
-                return s.split(spaces);
-            }
-        }
-        return s;
-    };
-
-    var trim = function(str) {
-        return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-    };
-
-    var addClass = function(node, classStr) {
-        classStr = str2array(classStr);
-        var cls = ' ' + node.className + ' ';
-        for (var i = 0, len = classStr.length, c; i < len; ++i) {
-            c = classStr[i];
-            if (c && cls.indexOf(' ' + c + ' ') < 0) {
-                cls += c + ' ';
-            }
-        }
-        node.className = trim(cls);
-    };
-
-    var removeClass = function(node, classStr) {
-        var cls;
-        if (!node) {
-            throw 'no node provided';
-        }
-        if (classStr !== undefined) {
-            classStr = str2array(classStr);
-            cls = ' ' + node.className + ' ';
-            for (var i = 0, len = classStr.length; i < len; ++i) {
-                cls = cls.replace(' ' + classStr[i] + ' ', ' ');
-            }
-            cls = trim(cls);
-        } else {
-            cls = '';
-        }
-        if (node.className != cls) {
-            node.className = cls;
-        }
-    };
-
     var getSlideEl = function(slideNo) {
         if (slideNo > 0) {
             return slides[slideNo - 1];
@@ -103,8 +55,8 @@ function main() {
     var changeSlideElClass = function(slideNo, className) {
         var el = getSlideEl(slideNo);
         if (el) {
-            removeClass(el, 'far-past past current future far-future');
-            addClass(el, className);
+            el.classList.remove('far-past', 'past', 'current', 'future', 'far-future');
+            el.classList.add(className);
         }
     };
 
@@ -150,12 +102,12 @@ function main() {
         if (toc) {
             var tocRows = toc.getElementsByTagName('tr');
             for (var i=0; i<tocRows.length; i++) {
-                removeClass(tocRows.item(i), 'active');
+                tocRows.item(i).classList.remove('active');
             }
 
             var currentTocRow = document.getElementById('toc-row-' + currentSlideNo);
             if (currentTocRow) {
-                addClass(currentTocRow, 'active');
+                currentTocRow.classList.add('active');
             }
         }
     };
@@ -260,11 +212,11 @@ function main() {
 
     var toggleOverview = function() {
         if (!overviewActive) {
-            addClass(document.body, 'expose');
+            document.body.classList.add('expose');
             overviewActive = true;
             setScale(1);
         } else {
-            removeClass(document.body, 'expose');
+            document.body.classList.remove('expose');
             overviewActive = false;
             if (expanded) {
                 setScale(scale);    // restore scale
@@ -283,8 +235,11 @@ function main() {
         }
 
         if (isPresenterView) {
-            var action = overviewActive ? removeClass : addClass;
-            action(document.body, 'presenter_view');
+            if (overviewActive) {
+                document.body.classList.add('presenter_view');
+            } else {
+                document.body.classList.remove('presenter_view');
+            }
         }
 
         var toc = document.getElementById('toc');
@@ -337,14 +292,14 @@ function main() {
     var showContext = function() {
         try {
             var presentation = document.getElementsByClassName('slides')[0];
-            removeClass(presentation, 'nocontext');
+            presentation.classList.remove('nocontext');
         } catch (e) {}
     };
 
     var hideContext = function() {
         try {
             var presentation = document.getElementsByClassName('slides')[0];
-            addClass(presentation, 'nocontext');
+            presentation.classList.add('nocontext');
         } catch (e) {}
     };
 
@@ -583,7 +538,7 @@ function main() {
             isPresenterView = true;
             showingPresenterView = true;
             presenterViewWin = window;
-            addClass(document.body, 'presenter_view');
+            document.body.classList.add('presenter_view');
             updateTime();
             window.setInterval(updateTime, 1000);
         } else {
@@ -599,7 +554,7 @@ function main() {
         window.onresize = resizeSlides;
 
         for (var i = 0; i < slides.length; i++) {
-            addClass(slides[i], 'slide far-future');
+            slides[i].classList.add('slide', 'far-future');
         }
         updateSlideClasses(false);
 
