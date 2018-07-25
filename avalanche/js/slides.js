@@ -210,6 +210,20 @@ function main() {
         }
     };
 
+    var toggleFullScreen = function() {
+        if (document.mozFullScreen !== undefined && !document.mozFullScreen) {
+            document.body.mozRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else if (document.webkitIsFullScreen !== undefined && !document.webkitIsFullScreen) {
+            document.body.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        } else {
+            if (document.webkitCancelFullScreen !== undefined) {
+                document.webkitCancelFullScreen();
+            } else if (document.mozCancelFullScreen !== undefined) {
+                document.mozCancelFullScreen();
+            }
+        }
+    };
+
     var toggleOverview = function() {
         if (!overviewActive) {
             document.body.classList.add('expose');
@@ -394,6 +408,15 @@ function main() {
             case 69: // e
                 if (!modifierKeyDown && !overviewActive) {
                     expandSlides();
+                }
+                break;
+            case 70: // f
+                // From http://io-2012-slides.googlecode.com/
+                // Only respect 'f' on body. Don't want to capture keys from an <input>.
+                // Also, ignore browser's fullscreen shortcut (cmd+shift+f) so we don't
+                // get trapped in fullscreen!
+                if (event.target == document.body && !modifierKeyDown) {
+                    toggleFullScreen();
                 }
                 break;
             case 72: // h
