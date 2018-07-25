@@ -294,11 +294,9 @@ function main() {
         }
 
         if (!tocOpened || !overviewActive) {
-            presentation.style.marginLeft = '0px';
-            presentation.style.width = '100%';
+            presentation.style.marginLeft = '-512px';
         } else {
-            presentation.style.marginLeft = toc.clientWidth + 'px';
-            presentation.style.width = (presentation.clientWidth - toc.clientWidth) + 'px';
+            presentation.style.marginLeft = (toc.clientWidth - 512) + 'px';
         }
     };
 
