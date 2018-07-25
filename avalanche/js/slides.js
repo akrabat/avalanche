@@ -317,18 +317,21 @@ function main() {
         presentation.style.transform = transform;
     };
 
+    var resizeSlides = function() {
+        if (!expanded) {
+            setScale(1);
+        } else {
+            scale = computeScale();
+            setScale(scale);
+        }
+    };
+
     var expandSlides = function() {
         if (overviewActive) {
             return;
         }
-        if (expanded) {
-            setScale(1);
-            expanded = false;
-        } else {
-            scale = computeScale();
-            setScale(scale);
-            expanded = true;
-        }
+        expanded = !expanded;
+        resizeSlides();
     };
 
     var showContext = function() {
@@ -593,7 +596,7 @@ function main() {
         document.addEventListener('DOMMouseScroll', handleWheel, false);
 
         window.onmousewheel = document.onmousewheel = handleWheel;
-        window.onresize = expandSlides;
+        window.onresize = resizeSlides;
 
         for (var i = 0; i < slides.length; i++) {
             addClass(slides[i], 'slide far-future');
