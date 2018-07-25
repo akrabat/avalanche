@@ -11,7 +11,8 @@ function main() {
     var blanked = false;
     var slides = document.getElementsByClassName('slide');
     var touchStartX = 0;
-    var spaces = /\s+/, a1 = [''];
+    var spaces = /\s+/;
+    var a1 = [''];
     var tocOpened = false;
     var helpOpened = false;
     var overviewActive = false;
@@ -243,12 +244,16 @@ function main() {
         }
     };
 
+    var setPerspective = function () {
+        document.getElementsByClassName('presentation')[0].style.webkitPerspective = '0';
+    };
+
     var switch3D = function() {
         if (document.body.className.indexOf('three-d') == -1) {
             document.getElementsByClassName('presentation')[0].style.webkitPerspective = '1000px';
             document.body.className += ' three-d';
         } else {
-            window.setTimeout('document.getElementsByClassName(\'presentation\')[0].style.webkitPerspective = \'0\';', 2000);
+            window.setTimeout(setPerspective, 2000);
             document.body.className = document.body.className.replace(/three-d/, '');
         }
     };
@@ -270,8 +275,9 @@ function main() {
     };
 
     var updateOverview = function() {
+        var presentation;
         try {
-            var presentation = document.getElementsByClassName('presentation')[0];
+            presentation = document.getElementsByClassName('presentation')[0];
         } catch (e) {
             return;
         }
@@ -369,10 +375,8 @@ function main() {
             case 18: // alt
             case 91: // command
                 return true;
-                break;
             default:
                 return false;
-                break;
         }
     };
 
@@ -485,19 +489,21 @@ function main() {
         }
     };
 
+    var onSlideClick = function (e) {
+        if (overviewActive) {
+            currentSlideNo = this.num;
+            toggleOverview();
+            updateSlideClasses(true);
+            e.preventDefault();
+        }
+        return false;
+    };
+
     var addSlideClickListeners = function() {
         for (var i=0; i < slides.length; i++) {
             var slide = slides.item(i);
             slide.num = i + 1;
-            slide.addEventListener('click', function(e) {
-                if (overviewActive) {
-                    currentSlideNo = this.num;
-                    toggleOverview();
-                    updateSlideClasses(true);
-                    e.preventDefault();
-                }
-                return false;
-            }, true);
+            slide.addEventListener('click', onSlideClick, true);
         }
     };
 
@@ -526,16 +532,18 @@ function main() {
         }, false);
     };
 
+    var onTocClick = function (e) {
+        currentSlideNo = Number(this.attributes.href.value.replace('#slide', ''));
+        updateSlideClasses(true);
+        e.preventDefault();
+    };
+
     var addTocLinksListeners = function() {
         var toc = document.getElementById('toc');
         if (toc) {
             var tocLinks = toc.getElementsByTagName('a');
             for (var i=0; i < tocLinks.length; i++) {
-                tocLinks.item(i).addEventListener('click', function(e) {
-                    currentSlideNo = Number(this.attributes['href'].value.replace('#slide', ''));
-                    updateSlideClasses(true);
-                    e.preventDefault();
-                }, true);
+                tocLinks.item(i).addEventListener('click', onTocClick, true);
             }
         }
     };
@@ -589,8 +597,8 @@ function main() {
         window.onmousewheel = document.onmousewheel = handleWheel;
         window.onresize = expandSlides;
 
-        for (var i = 0, el; el = slides[i]; i++) {
-            addClass(el, 'slide far-future');
+        for (var i = 0; i < slides.length; i++) {
+            addClass(slides[i], 'slide far-future');
         }
         updateSlideClasses(false);
 
